@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery - Laxmi Charities</title>
+  <link rel="icon" type="image/x-icon" href="./resources/favicon-logo.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<body>
+  <header>
+    <div class="header-left">
+      <img src="./resources/logo.png" alt="Laxmi Charities Logo" class="logo" />
+    </div>
+    <nav class="header-right">
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <ul id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="application.html">Application</a></li>
+        <li><a href="/resources/brouchure.pdf" download>Brochure</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="gallery-section" data-aos="fade-up">
+      <h1>Gallery</h1>
+      <p>Take a look at our event and scholarship moments captured through the years.</p>
+
+    <div class="gallery-grid">
+  <a href="/resources/poster.jpeg" data-lightbox="laxmi-gallery" data-title="Scholarship Event 1">
+    <img src="/resources/poster.jpeg" alt="Scholarship Event 1">
+  </a>
+  <a href="/resources/scholarship.jpeg" data-lightbox="laxmi-gallery" data-title="Student Felicitation">
+    <img src="/resources/scholarship.jpeg" alt="Student Felicitation">
+  </a>
+  <a href="/resources/test1.PNG" data-lightbox="laxmi-gallery" data-title="Alumni Meet">
+    <img src="/resources/test1.PNG" alt="Alumni Meet">
+  </a>
+  <a href="./resources/gallery4.jpg" data-lightbox="laxmi-gallery" data-title="Workshop Session">
+    <img src="./resources/gallery4.jpg" alt="Workshop Session">
+  </a>
+</div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Laxmi Charities. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>

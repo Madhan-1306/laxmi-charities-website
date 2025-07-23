@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Testimonials - Laxmi Charities</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="./resources/favicon-logo.png" />
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <img src="./resources/logo.png" alt="Laxmi Charities Logo" class="logo" />
+    </div>
+    <nav class="header-right">
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <ul id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="application.html">Application</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="testimonial-downloads">
+      <h2>Download Testimonials</h2>
+      <div class="download-grid">
+        <div class="download-card">
+          <a href="/resources/testimonial1.pdf" target="_blank">
+            <img src="/resources/test1.PNG" alt="Testimonial PDF" />
+            <ul>Download</ul>
+          </a>
+        </div>
+
+        <div class="download-card">
+          <a href="/resources/testimonial2.pdf" target="_blank">
+            <img src="/resources/test2.PNG" alt="Testimonial PDF" />
+            <ul>Download</ul>
+          </a>
+        </div>
+        
+        <div class="download-card">
+          <a href="/resources/testimonial3.pptx" target="_blank">
+            <img src="/resources/test3.PNG" alt="Testimonial PPT" />
+            <ul>Download</ul>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <ul>&copy; 2025 Laxmi Charities. All rights reserved.</ul>
+  </footer>
+
+  <script>
+    document.querySelector("#hamburger").addEventListener("click", () => {
+      document.querySelector("#navLinks").classList.toggle("active");
+    });
+  </script>
+</body>
+</html>

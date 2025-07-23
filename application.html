@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Application Form - Laxmi Charities</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <header >
+    <div class="header-left">
+      <img src="./resources/logo.png" alt="Laxmi Charities Logo" class="logo" />
+    </div>
+    <nav class="header-right">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="application.html">Application</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
+
+  <section id="application" data-aos="fade-up">
+    <h2>Student Application Form</h2>
+    <form id="studentForm">
+      <fieldset data-aos="zoom-in">
+        <legend>1. Basic Details</legend>
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email" required />
+        <input type="text" placeholder="Phone Number" required />
+      </fieldset>
+
+      <fieldset data-aos="zoom-in">
+        <legend>2. Bank Details</legend>
+        <input type="text" placeholder="Bank Name" required />
+        <input type="text" placeholder="Account Number" required />
+        <input type="text" placeholder="IFSC Code" required />
+      </fieldset>
+
+      <fieldset data-aos="zoom-in">
+        <legend>3. Verification</legend>
+        <label><input type="checkbox" required /> I confirm the above details are correct</label>
+      </fieldset>
+
+      <fieldset data-aos="zoom-in">
+        <legend>4. Application ID (auto-generated)</legend>
+        <button type="button" onclick="generateAppID()">Generate ID</button>
+        <input type="text" id="appID" readonly />
+      </fieldset>
+
+      <fieldset data-aos="zoom-in">
+        <legend>5. Document Upload</legend>
+        <input type="file" required />
+      </fieldset>
+
+      <fieldset data-aos="zoom-in">
+        <legend>6. Group Company Employment</legend>
+        <label>Is parent a group company employee?</label><br />
+        <input type="radio" name="employee" value="yes" onclick="showEmployeeDetails(true)" /> Yes
+        <input type="radio" name="employee" value="no" onclick="showEmployeeDetails(false)" /> No
+      </fieldset>
+
+      <div id="employeeDetails" style="display: none;" data-aos="zoom-in">
+        <fieldset>
+          <legend>Employee Details</legend>
+          <input type="text" placeholder="Employee ID" />
+          <input type="text" placeholder="Company Name" />
+        </fieldset>
+      </div>
+
+      <button type="submit" data-aos="zoom-in">Submit for Approval</button>
+    </form>
+  </section>
+
+  <footer >
+    <ul>&copy; 2025 Laxmi Charities. All rights reserved.</ul>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    AOS.init();
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const navToggle = document.querySelector(".hamburger");
+      const navMenu = document.querySelector("nav ul");
+
+      if (navToggle && navMenu) {
+        navToggle.addEventListener("click", () => {
+          navMenu.classList.toggle("active");
+        });
+      }
+    });
+  </script>
+</body>
+</html>
