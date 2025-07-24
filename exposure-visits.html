@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learning Modules - Laxmi Charities</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <img src="./resources/logo.png" alt="Laxmi Charities Logo" class="logo" />
+    </div>
+    <nav class="header-right">
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <ul id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="application.html">Application</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="modules">
+      <h2>Learning Modules</h2>
+      <p>Access downloadable learning resources and study materials to support your academic journey.</p>
+
+      <div class="module-grid">
+        <div class="module-card">
+          <h4>added soon</h4>
+          <p></p>
+          <a href="" download>Download PDF</a>
+        </div>
+        <div class="module-card">
+          <h4>added soon</h4>
+          <p></p>
+          <a href="" download>Download PDF</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <ul>&copy; 2025 Laxmi Charities. All rights reserved.</ul>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const navToggle = document.getElementById("hamburger");
+      const navMenu = document.getElementById("navLinks");
+
+      if (navToggle && navMenu) {
+        navToggle.addEventListener("click", () => {
+          navMenu.classList.toggle("active");
+        });
+      }
+    });
+  </script>
+</body>
+</html>

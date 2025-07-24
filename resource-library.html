@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Lectures - Laxmi Charities</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <img src="./resources/logo.png" alt="Laxmi Charities Logo" class="logo" />
+    </div>
+    <nav class="header-right">
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <ul id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="application.html">Application</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="video-lectures">
+      <h2>Educational Video Lectures</h2>
+      <p>Here are some curated lectures for our students to enhance their learning.</p>
+
+      <div class="video-grid">
+        <div class="video-card">
+          <iframe width="100%" height="200" src="https://www.youtube" frameborder="0" allowfullscreen></iframe>
+          <p>Scholarship Application Guide</p>
+        </div>
+        <div class="video-card">
+          <iframe width="100%" height="200" src="https://www.youtube" frameborder="0" allowfullscreen></iframe>
+          <p>Financial Literacy for Students</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <ul>&copy; 2025 Laxmi Charities. All rights reserved.</ul>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const navToggle = document.getElementById("hamburger");
+      const navMenu = document.getElementById("navLinks");
+
+      if (navToggle && navMenu) {
+        navToggle.addEventListener("click", () => {
+          navMenu.classList.toggle("active");
+        });
+      }
+    });
+  </script>
+</body>
+</html>
