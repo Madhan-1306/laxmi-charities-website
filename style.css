@@ -436,7 +436,7 @@ form button:hover {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #1917170a;
+  background-color: #191717cb;
   color: white;
   font-size: clamp(0.9rem, 2.5vw, 1.4rem); 
   font-weight: 600;
@@ -1144,7 +1144,7 @@ form button:hover {
 }
 
 .impact-icon {
-  font-size: 3rem;
+  font-size: 6rem;
   margin-bottom: 0.8rem;
 }
 
@@ -1206,4 +1206,53 @@ form button:hover {
   .about-image-block img {
     max-width: 100%;
   }
+}
+.testimonial-intros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-bottom: 10px;
+  justify-items: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.intro-card {
+  text-align: center;
+  max-width: 250px;
+  font-family: 'Inter', sans-serif;
+}
+
+.intro-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.intro-card .quote {
+  margin-top: 12px;
+  font-style: italic;
+  font-size: 15px;
+  color: #444;
+  text-align: center;
+}
+
+.intro-card .name,
+.intro-card .designation {
+  text-align: left;
+  width: 100%;
+}
+
+.intro-card .name {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+.intro-card .designation {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
 }

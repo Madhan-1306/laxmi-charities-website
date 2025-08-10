@@ -6,59 +6,60 @@
   <title>Our Partners - Laxmi Charities</title>
   <style>
     header {
-  background-color: #ffffff;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+      background-color: #ffffff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-.logo {
-  width: 110px;
-}
+    .logo {
+      width: 110px;
+    }
 
-nav {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
+    nav {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
 
-nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
 
-nav ul li a {
-  text-decoration: none;
-  color: #0077cc;
-  font-weight: 600;
-  transition: 0.3s;
-}
+    nav ul li a {
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: 600;
+      transition: 0.3s;
+    }
 
-nav ul li a:hover {
-  color: #ff9800;
-}
+    nav ul li a:hover {
+      color: #ff9800;
+    }
 
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  margin-left: auto;
-}
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: auto;
+    }
 
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: #0077cc;
-  margin: 4px 0;
-  border-radius: 3px;
-}
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: #0077cc;
+      margin: 4px 0;
+      border-radius: 3px;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -76,12 +77,18 @@ nav ul li a:hover {
     .partner-header h1 {
       font-size: 36px;
       margin-bottom: 10px;
+      color: #f38a12;
+    }
+
+    .partner-header h1 span {
+      font-size: 1.4em;
     }
 
     .partner-header p {
       font-size: 18px;
-      max-width: 600px;
-      margin: auto;
+      max-width: 700px;
+      margin: 10px auto 0;
+      color: #fff !important;
     }
 
     .partner-main {
@@ -98,7 +105,7 @@ nav ul li a:hover {
       font-size: 28px;
       margin-bottom: 30px;
       text-align: center;
-      color: #2c3e50;
+      color: #f38a12;
     }
 
     .partner-grid {
@@ -115,6 +122,7 @@ nav ul li a:hover {
       box-shadow: 0 6px 15px rgba(0,0,0,0.1);
       flex: 1 1 280px;
       transition: transform 0.3s ease;
+      text-align: center;
     }
 
     .partner-card:hover {
@@ -127,9 +135,20 @@ nav ul li a:hover {
       color: #1e272e;
     }
 
-    .partner-card p {
+    .partner-button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #f38a12;
+      color: white;
+      border-radius: 6px;
       font-size: 15px;
-      color: #555;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .partner-button:hover {
+      background-color: #219ee1;
     }
 
     .partner-cta {
@@ -143,22 +162,11 @@ nav ul li a:hover {
     .partner-cta h2 {
       font-size: 24px;
       margin-bottom: 15px;
-      color: #333;
+      color: #f38a12;
     }
 
-    .partner-button {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 25px;
-      background-color: #0c7dfd;
-      color: white;
-      border-radius: 6px;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
-    }
-
-    .partner-button:hover {
-      background-color: #095ec2;
+    .partner-cta p {
+      color: #000;
     }
 
     footer {
@@ -170,20 +178,10 @@ nav ul li a:hover {
       color: #777;
       border-top: 1px solid #ddd;
     }
-.partner-section h2,
-.partner-cta h2 {
-  color: #f38a12 !important;
-}
-
-.partner-card p,
-.partner-cta p,
-.partner-header p {
-  color: #000000 !important;
-}
-
   </style>
 </head>
-<header >
+<body>
+  <header>
     <div class="header-left">
       <img src="./resources/logo.png" alt="Laxmi Charities Logo" class="logo" />
     </div>
@@ -198,27 +196,29 @@ nav ul li a:hover {
       </div>
     </nav>
   </header>
-<body>
+
   <div class="partner-header">
-    <h1>🤝 Our Partners</h1>
+    <h1><span>🤝</span> OUR PARTNERS</h1>
     <p>Working hand-in-hand with institutions and businesses for a greater cause.</p>
+    <p>We are proud to collaborate with organizations that share our vision of empowering communities, 
+       fostering education, and driving impactful change. Together, we strive to make a lasting difference.</p>
   </div>
 
   <main class="partner-main">
     <section class="partner-section">
-      <h2> Featured Partners</h2>
+      <h2>Featured Partners</h2>
       <div class="partner-grid">
         <div class="partner-card">
           <h3>A</h3>
-          <p>will be added</p>
+          <a href="A.pdf" download class="partner-button">Download</a>
         </div>
         <div class="partner-card">
           <h3>B</h3>
-          <p>will be added</p>
+          <a href="B.pdf" download class="partner-button">Download</a>
         </div>
         <div class="partner-card">
           <h3>C</h3>
-          <p>will be added</p>
+          <a href="C.pdf" download class="partner-button">Download</a>
         </div>
       </div>
     </section>
@@ -226,7 +226,7 @@ nav ul li a:hover {
     <section class="partner-cta">
       <h2>Become a Partner</h2>
       <p>If your organization is passionate about social good, write to us:</p>
-      <a href="mailto:shyamalaa@laxmicharities.in" href="lakshmin@laxmicharities.in" class="partner-button">Contact Us</a>
+      <a href="mailto:shyamalaa@laxmicharities.in" class="partner-button">Contact Us</a>
     </section>
   </main>
 
