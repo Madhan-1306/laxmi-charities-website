@@ -1242,6 +1242,7 @@ form button:hover {
 .intro-card .designation {
   text-align: left;
   width: 100%;
+  margin: 0;
 }
 
 .intro-card .name {
