@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Laxmi Charities</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+  header {
+  background-color: #ffffff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  width: 110px;
+}
+
+nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff9800;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #0077cc;
+  margin: 4px 0;
+  border-radius: 3px;
+}
+    /* Page Heading */
+    .page-heading {
+      text-align: center;
+      color: #007BFF;
+      font-size: 2.5rem;
+      margin: 30px 0;
+      font-weight: bold;
+    }
+
+    /* About blocks */
+.about-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.about-image-block img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-image-block img:hover {
+  transform: scale(1.02);
+}
+
+/* Mobile responsiveness */
+@media screen and (min-width: 768px) {
+  .about-section {
+    flex-direction: column;
+  }
+
+  .about-image-block img {
+    max-width: 100%;
+  }
+}
+
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 20px auto;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn-read {
+      background: #007BFF;
+      color: white;
+    }
+    .btn-download {
+      background: #28a745;
+      color: white;
+      display: none; /* Hidden initially */
+    }
+    .btn:hover {
+      opacity: 0.85;
+    }
+
+    .center {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+<header >
+    <div class="header-left">
+      <img src="./resources/logo.png" alt="Laxmi Charities Logo" class="logo" />
+    </div>
+    <nav class="header-right">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="application.html">Application</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Heading -->
+  <h1 class="page-heading">Welcome To Laxmi Charities</h1>
+
+  <!-- About Blocks -->
+  <div class="about-image-block">
+    <img src="./resources" alt="" />
+  </div>
+  <div class="about-image-block">
+    <img src="./resources/a" alt="" />
+  </div>
+  <div class="about-image-block">
+    <img src="./resources/a" alt="" />
+  </div>
+  <div class="about-image-block">
+    <img src="./resources/ab" alt="" />
+  </div>
+  <div class="about-image-block">
+    <img src="./resources" alt="" />
+  </div>
+</section>
+
+  <!-- Read More & Download -->
+  <div class="center">
+  <p>
+    “The Laxmi Charities Scholarship is more than financial aid—it’s a foundation for hope, growth, and a better future”.
+    <a href="about.pdf" download style="color: blue; text-decoration: underline;">(Read more…)</a>
+  </p>
+</div>
+
+
+  <script>
+    function showDownload() {
+      document.getElementById("downloadBtn").style.display = "inline-block";
+    }
+  </script>
+
+</body>
+</html>
