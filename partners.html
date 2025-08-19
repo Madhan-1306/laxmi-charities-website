@@ -58,6 +58,7 @@
       background: #0077cc;
       margin: 4px 0;
       border-radius: 3px;
+      transition: 0.3s;
     }
 
     body {
@@ -77,7 +78,7 @@
     .partner-header h1 {
       font-size: 36px;
       margin-bottom: 10px;
-      color: #f38a12;
+      color: #ffffff;
     }
 
     .partner-header h1 span {
@@ -105,7 +106,7 @@
       font-size: 28px;
       margin-bottom: 30px;
       text-align: center;
-      color: #f38a12;
+      color: #124af3;
     }
 
     .partner-grid {
@@ -148,7 +149,7 @@
     }
 
     .partner-button:hover {
-      background-color: #219ee1;
+      background-color: #214be1;
     }
 
     .partner-cta {
@@ -162,7 +163,7 @@
     .partner-cta h2 {
       font-size: 24px;
       margin-bottom: 15px;
-      color: #f38a12;
+      color: #121df3;
     }
 
     .partner-cta p {
@@ -178,6 +179,30 @@
       color: #777;
       border-top: 1px solid #ddd;
     }
+
+    /* 🔹 Mobile Responsive Nav */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        padding: 15px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        border-radius: 8px;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
   </style>
 </head>
 <body>
@@ -190,7 +215,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="application.html">Application</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="./about.html">About</a></li>
       </ul>
       <div class="hamburger">
         <span></span><span></span><span></span>
@@ -199,7 +224,7 @@
   </header>
 
   <div class="partner-header">
-    <h1><span>🤝</span> OUR PARTNERS</h1>
+    <h1><span></span> OUR PARTNERS</h1>
     <p>Working hand-in-hand with institutions and businesses for a greater cause.</p>
     <p>We are proud to collaborate with organizations that share our vision of empowering communities, 
        fostering education, and driving impactful change. Together, we strive to make a lasting difference.</p>
@@ -210,16 +235,12 @@
       <h2>Featured Partners</h2>
       <div class="partner-grid">
         <div class="partner-card">
-          <h3>A</h3>
-          <a href="A.pdf" download class="partner-button">Download</a>
+          <h3>Our Trusted Partner Institutes shaping higher education.</h3>
+          <a href="./resources/Institutions_Full_Names - 2025-26.xlsx" download class="partner-button">Download</a>
         </div>
         <div class="partner-card">
-          <h3>B</h3>
-          <a href="B.pdf" download class="partner-button">Download</a>
-        </div>
-        <div class="partner-card">
-          <h3>C</h3>
-          <a href="C.pdf" download class="partner-button">Download</a>
+          <h3>Our Valued Partner Schools nurturing young minds.</h3>
+          <a href="./resources/Laxmi_Charities_Supported_Schools 1.xlsx" download class="partner-button">Download</a>
         </div>
       </div>
     </section>
@@ -232,5 +253,15 @@
   </main>
 
   <footer>&copy; 2025 Laxmi Charities. All rights reserved.</footer>
+
+  <!-- 🔹 Mobile Nav Toggle Script -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('nav ul');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>

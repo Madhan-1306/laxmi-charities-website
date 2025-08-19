@@ -21,7 +21,7 @@ main {
 }
 
 header {
-  background-color: #ffffff;
+  background-color: #fffffffa;
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -51,7 +51,7 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: #0077cc;
+  color: #2756ff;
   font-weight: 600;
   transition: 0.3s;
 }
@@ -70,7 +70,7 @@ nav ul li a:hover {
 .hamburger span {
   width: 25px;
   height: 3px;
-  background: #0077cc;
+  background:  #2756ff;
   margin: 4px 0;
   border-radius: 3px;
 }
@@ -420,16 +420,23 @@ form button:hover {
 .scholarship-banner {
   position: relative;
   width: 100%;
-  max-height: 500px;
-  overflow: hidden;
+  height: auto;
   margin-bottom: 30px;
 }
+
+.scholarship-banner img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;   /* makes sure the image scales well */
+  display: block;
+}
+
 
 .scholarship-image {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
 }
 .scholarship-caption {
   position: absolute;
@@ -669,13 +676,13 @@ form button:hover {
 }
 
 .update-banner {
-  background-color: #ffeb3b;
-  color: #d32f2f;
+  background-color: #1262da;
+  color: #fafafa;
   font-weight: bold;
   padding: 12px;
   text-align: center;
   font-size: 16px;
-  border-bottom: 2px solid #f44336;
+  border-bottom: 2px solid #f47f36;
   animation: blinkText 1.5s infinite;
 }
 
@@ -1143,9 +1150,13 @@ form button:hover {
   box-shadow: 0 18px 36px rgba(0, 0, 0, 0.15);
 }
 
-.impact-icon {
-  font-size: 6rem;
-  margin-bottom: 0.8rem;
+.impact-icon img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;   /* ensures 1:1 square format */
+  border-radius: 50%;  /* optional: makes it round */
+  display: block;
+  margin: 0 auto 1rem; /* centers the image */
 }
 
 .impact-count, .impact-region {
@@ -1161,11 +1172,13 @@ form button:hover {
   font-weight: 600;
   color: #1a237e;
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .impact-card p {
   font-size: 0.95rem;
   color: #444;
+  text-align: center;
 }
 @media screen and (max-width: 768px) {
   .impact-grid.advance-impact {
@@ -1233,9 +1246,9 @@ form button:hover {
 .intro-card .quote {
   margin-top: 12px;
   font-style: italic;
-  font-size: 15px;
+  font-size: 14px;
   color: #444;
-  text-align: center;
+  text-align: left;
 }
 
 .intro-card .name,
@@ -1247,13 +1260,13 @@ form button:hover {
 
 .intro-card .name {
   margin-top: 8px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   color: #000;
 }
 
 .intro-card .designation {
-  font-size: 14px;
-  font-weight: bold;
-  color: #555;
+  font-size: 12px;
+  font-weight: normal;
+  color: #282828;
 }
