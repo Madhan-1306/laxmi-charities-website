@@ -36,3 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
       updateCount();
     });
   });
+  function showImage() {
+    document.getElementById("popup").style.display = "block";
+  }
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+  }

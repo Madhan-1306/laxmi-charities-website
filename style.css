@@ -14,6 +14,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 main {
@@ -684,6 +685,7 @@ form button:hover {
   font-size: 16px;
   border-bottom: 2px solid #f47f36;
   animation: blinkText 1.5s infinite;
+  display: block;
 }
 
 @keyframes blinkText {
