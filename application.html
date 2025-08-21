@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Application Form - Laxmi Charities</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 </head>
 <body>
-  <header >
+  <header>
     <div class="header-left">
       <img src="./resources/logo.png" alt="Laxmi Charities Logo" class="logo" />
     </div>
@@ -18,7 +18,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="application.html">Application</a></li>
-        <li><a href="./about.html">About</a></li>
+        <li><a href="about.html">About</a></li>
       </ul>
       <div class="hamburger">
         <span></span><span></span><span></span>
@@ -27,58 +27,52 @@
   </header>
 
   <section id="application" data-aos="fade-up">
-    <h2>Student Application Form</h2>
-    <form id="studentForm">
-      <fieldset data-aos="zoom-in">
-        <legend>1. Basic Details</legend>
-        <input type="text" placeholder="Full Name" required />
-        <input type="email" placeholder="Email" required />
-        <input type="text" placeholder="Phone Number" required />
-      </fieldset>
+    <h2>Application Process</h2>
 
-      <fieldset data-aos="zoom-in">
-        <legend>2. Bank Details</legend>
-        <input type="text" placeholder="Bank Name" required />
-        <input type="text" placeholder="Account Number" required />
-        <input type="text" placeholder="IFSC Code" required />
-      </fieldset>
+    <!-- Step 1: Rules & Regulations -->
+    <div id="rulesSection" data-aos="zoom-in">
+      <h3></h3>
+      <p>Institute Selection.</p>
+      <ul>
+        <li>Premium institutes will be identified and contacted by Laxmi Charities.</li>
+      </ul>
+      <p>Student Nomination.</p>
+      <ul>
+        <li>Each institution will shortlist eligible students based on the criteria provided by Laxmi Charities.</li>
+      </ul>
+      <p>Verification.</p>
+      <ul>
+        <li>The institution will submit the final list of selected students along with an attestation confirming eligibility (annual parental income and academic performance as required)..</li>
+      </ul>
+      <p>Application Submission.</p>
+      <ul>
+        <li>A scholarship application link will then be shared with the shortlisted students.</li>
+        <li>Students must complete and submit the online application form to Laxmi Charities.</li>
+      </ul>
+      <p>Scholarship Disbursement</p>
+      <ul>
+        <li>Upon approval, the scholarship amount will be disbursed directly to the students.</li>
+      </ul>
+      <button onclick="acceptRules()">I Accept</button>
+    </div>
 
-      <fieldset data-aos="zoom-in">
-        <legend>3. Verification</legend>
-        <label><input type="checkbox" required /> I confirm the above details are correct</label>
-      </fieldset>
+    <!-- Step 2: Password Input -->
+    <div id="passwordSection" style="display: none;" data-aos="zoom-in">
+      <h3>Enter Password</h3>
+      <input type="password" id="accessPassword" placeholder="Enter Password" />
+      <button onclick="validatePassword()">Submit</button>
+      <p id="passwordError" style="color: red; display: none;">Incorrect password. Please try again.</p>
+    </div>
 
-      <fieldset data-aos="zoom-in">
-        <legend>4. Application ID (auto-generated)</legend>
-        <button type="button" onclick="generateAppID()">Generate ID</button>
-        <input type="text" id="appID" readonly />
-      </fieldset>
-
-      <fieldset data-aos="zoom-in">
-        <legend>5. Document Upload</legend>
-        <input type="file" required />
-      </fieldset>
-
-      <fieldset data-aos="zoom-in">
-        <legend>6. Group Company Employment</legend>
-        <label>Is parent a group company employee?</label><br />
-        <input type="radio" name="employee" value="yes" onclick="showEmployeeDetails(true)" /> Yes
-        <input type="radio" name="employee" value="no" onclick="showEmployeeDetails(false)" /> No
-      </fieldset>
-
-      <div id="employeeDetails" style="display: none;" data-aos="zoom-in">
-        <fieldset>
-          <legend>Employee Details</legend>
-          <input type="text" placeholder="Employee ID" />
-          <input type="text" placeholder="Company Name" />
-        </fieldset>
-      </div>
-
-      <button type="submit" data-aos="zoom-in">Submit for Approval</button>
-    </form>
+    <!-- Step 3: Form Links -->
+    <div id="formLinks" style="display: none;" data-aos="zoom-in">
+      <h3>Select Your Application Form</h3>
+      <button onclick="location.href='https://forms.office.com/Pages/ShareFormPage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__oHSrXdUREMyS0dFTlM4R0E5N0dET0U3QlZOTks5NC4u&sharetoken=8OKN1ZKcOfFUsblywLaj '">School Application Form</button>
+      <button onclick="location.href='https://forms.office.com/Pages/ShareFormPage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__oHSrXdUOTMwSVZHTkJRR0IyMUpTVlBTU0hCWU4zMy4u&sharetoken=AcktacEMbymRE2OHYnjf '">Institute Application Form</button>
+    </div>
   </section>
 
-  <footer >
+  <footer>
     <ul>&copy; 2025 Laxmi Charities. All rights reserved.</ul>
   </footer>
 
@@ -96,6 +90,25 @@
         });
       }
     });
+
+    function acceptRules() {
+      document.getElementById("rulesSection").style.display = "none";
+      document.getElementById("passwordSection").style.display = "block";
+    }
+
+    function validatePassword() {
+      const input = document.getElementById("accessPassword").value;
+      const correctPassword = "LCScholarship@25";
+      const errorMsg = document.getElementById("passwordError");
+
+      if (input === correctPassword) {
+        document.getElementById("passwordSection").style.display = "none";
+        document.getElementById("formLinks").style.display = "block";
+        errorMsg.style.display = "none";
+      } else {
+        errorMsg.style.display = "block";
+      }
+    }
   </script>
 </body>
 </html>
