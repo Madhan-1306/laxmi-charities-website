@@ -203,6 +203,40 @@
         display: flex;
       }
     }
+.partners-layout {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.partners-scroll {
+  overflow: hidden;
+  width: 100%;
+}
+
+.partners-logos {
+  display: flex;
+  flex-wrap: wrap; /* ✅ allow wrapping instead of scrolling */
+  justify-content: center;
+  gap: 20px;       /* ✅ space between logos */
+  /* animation: scroll-left 40s linear infinite; ❌ removed */
+}
+
+.partners-logos img {
+  width: 150px;   /* Adjust logo size */
+  height: auto;
+  margin: 15px;
+  flex: 0 0 auto;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .partners-logos img {
+    width: 100px;  /* Smaller logos for mobile */
+    margin: 10px;
+  }
+}
+
+
   </style>
 </head>
 <body>
@@ -229,6 +263,33 @@
     <p>We are proud to collaborate with organizations that share our vision of empowering communities, 
        fostering education, and driving impactful change. Together, we strive to make a lasting difference.</p>
   </div>
+
+  <section class="section partners-layout" data-aos="fade-up" data-aos-duration="10000">
+  <div class="section-inner">
+    <h2>Our Partners</h2>
+    <div class="partners-scroll">
+      <div class="partners-logos">
+        <!-- Repeat 80 logos here -->
+        <img src="./resources/college logo/Anurag University, Hyderabad.jpg" alt="Partner 1" />
+        <img src="./resources/college logo/B V Raju Institute of Technology, Narsapur.jpeg" alt="Partner 2" />
+        <img src="./resources/college logo/Chennai Institute of Technology.png" alt="Partner 3" />
+        <img src="./resources/college logo/Dr. M.G.R. Educational and Research Institute.png" alt="Partner 4" />
+        <img src="./resources/college logo/Ethiraj College for Women, Chennai.jpg" alt="Partner 5" />
+        <img src="./resources/college logo/Federal Institute of Science and Technology (FISAT), Kerala.png" alt="Partner 6" />
+      </div>
+  </div>
+  <div class="partners-scroll">
+    <div class="partners-logos">
+      <img src="./resources/college logo/G. Narayanamma Institute of Technology and Science for Women, Hyderabad.jpg">
+      <img src="./resources/college logo/Guru Nanak College, Velachery, Chennai.jpg">
+      <img src="./resources/college logo/Mepco Schlenk Engineering College.png">
+      <img src="./resources/college logo/Sri Ramachandra Institute of Higher Education and Research.png">
+      <img src="./resources/college logo/Srimad Andavan Arts and Science College.jpg">
+      <img src="./resources/college logo/SRM Institute of Science and Technology.jpg">
+    </div>
+  </div>
+</section>
+
 
   <main class="partner-main">
     <section class="partner-section">

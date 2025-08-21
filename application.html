@@ -2,12 +2,130 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Application Form - Laxmi Charities</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    /* Full height layout with sticky footer */
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Poppins', sans-serif;
+      background: #f9fafc;
+      color: #333;
+    }
+
+    header, section {
+      flex-shrink: 0;
+    }
+
+    footer {
+  background: #1a237e;
+  color: #fff;
+  text-align: center;   /* Center align all text */
+  padding: 15px 10px;
+  font-size: 14px;
+  width: 100%;
+  margin-top: auto;     /* Keeps footer at bottom */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer p {
+  margin: 5px 0;       /* Remove extra spacing */
+  line-height: 1.4;
+}
+
+    /* Section styling */
+    section {
+      padding: 20px;
+      max-width: 700px;
+      margin: 20px auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #1a237e;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      margin-top: 15px;
+      color: #000;
+    }
+
+    p {
+      margin: 5px 0;
+      line-height: 1.6;
+    }
+
+    label {
+      font-size: 14px;
+    }
+
+    /* Inputs */
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    /* Buttons */
+    button, 
+    #linksSection a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      background: #1a237e;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s ease;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    button:hover,
+    #linksSection a:hover {
+      background: #3949ab;
+    }
+
+    button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+
+    @media (max-width: 600px) {
+      section {
+        margin: 15px;
+        padding: 15px;
+      }
+      button, #linksSection a {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -18,7 +136,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="application.html">Application</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="./about.html">About</a></li>
       </ul>
       <div class="hamburger">
         <span></span><span></span><span></span>
@@ -26,60 +144,56 @@
     </nav>
   </header>
 
-  <section id="application" data-aos="fade-up">
+  <!-- STEP 1: Rules & Regulations -->
+  <section id="rules" data-aos="fade-up">
     <h2>Application Process</h2>
 
-    <!-- Step 1: Rules & Regulations -->
-    <div id="rulesSection" data-aos="zoom-in">
-      <h3></h3>
-      <p>Institute Selection.</p>
-      <ul>
-        <li>Premium institutes will be identified and contacted by Laxmi Charities.</li>
-      </ul>
-      <p>Student Nomination.</p>
-      <ul>
-        <li>Each institution will shortlist eligible students based on the criteria provided by Laxmi Charities.</li>
-      </ul>
-      <p>Verification.</p>
-      <ul>
-        <li>The institution will submit the final list of selected students along with an attestation confirming eligibility (annual parental income and academic performance as required)..</li>
-      </ul>
-      <p>Application Submission.</p>
-      <ul>
-        <li>A scholarship application link will then be shared with the shortlisted students.</li>
-        <li>Students must complete and submit the online application form to Laxmi Charities.</li>
-      </ul>
-      <p>Scholarship Disbursement</p>
-      <ul>
-        <li>Upon approval, the scholarship amount will be disbursed directly to the students.</li>
-      </ul>
-      <button onclick="acceptRules()">I Accept</button>
-    </div>
+    <h3>1. Institute Selection</h3>
+    <p>- Premium institutes will be identified and contacted by Laxmi Charities.</p>
 
-    <!-- Step 2: Password Input -->
-    <div id="passwordSection" style="display: none;" data-aos="zoom-in">
-      <h3>Enter Password</h3>
-      <input type="password" id="accessPassword" placeholder="Enter Password" />
-      <button onclick="validatePassword()">Submit</button>
-      <p id="passwordError" style="color: red; display: none;">Incorrect password. Please try again.</p>
-    </div>
+    <h3>2. Student Nomination</h3>
+    <p>- Each institution will shortlist eligible students based on the criteria provided by Laxmi Charities.</p>
 
-    <!-- Step 3: Form Links -->
-    <div id="formLinks" style="display: none;" data-aos="zoom-in">
-      <h3>Select Your Application Form</h3>
-      <button onclick="location.href='https://forms.office.com/Pages/ShareFormPage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__oHSrXdUREMyS0dFTlM4R0E5N0dET0U3QlZOTks5NC4u&sharetoken=8OKN1ZKcOfFUsblywLaj '">School Application Form</button>
-      <button onclick="location.href='https://forms.office.com/Pages/ShareFormPage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__oHSrXdUOTMwSVZHTkJRR0IyMUpTVlBTU0hCWU4zMy4u&sharetoken=AcktacEMbymRE2OHYnjf '">Institute Application Form</button>
-    </div>
+    <h3>3. Verification</h3>
+    <p>- The institution will submit the final list of selected students along with an attestation confirming eligibility (annual parental income and academic performance as required).</p>
+
+    <h3>4. Application Submission</h3>
+    <p>- A scholarship application link will then be shared with the shortlisted students.</p>
+    <p>- Students must complete and submit the online application form to Laxmi Charities</p>
+
+    <h3>5. Scholarship Disbursement</h3>
+    <p>- Upon approval, the scholarship amount will be disbursed directly to the students.</p>
+    
+    <label>
+      <input type="checkbox" id="acceptRules" /> I accept the terms and conditions
+    </label><br>
+    <button id="nextBtn" disabled>Next</button>
+  </section>
+
+  <!-- STEP 2: Password Section -->
+  <section id="passwordSection" style="display:none;" data-aos="fade-up">
+    <h2>Enter Access Password</h2>
+    <input type="password" id="accessPassword" placeholder="Enter Password" />
+    <button id="submitPassword">Submit</button>
+    <p id="errorMsg" style="color:red;display:none;">Incorrect password. Try again.</p>
+  </section>
+
+  <!-- STEP 3: Links Section -->
+  <section id="linksSection" style="display:none;" data-aos="fade-up">
+    <h2>Select Form</h2>
+    <a href="https://forms.office.com/Pages/ShareFormPage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__oHSrXdUREMyS0dFTlM4R0E5N0dET0U3QlZOTks5NC4u&sharetoken=8OKN1ZKcOfFUsblywLaj">📘 School Application Form</a><br><br>
+    <a href="https://forms.office.com/Pages/ShareFormPage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__oHSrXdUOTMwSVZHTkJRR0IyMUpTVlBTU0hCWU4zMy4u&sharetoken=AcktacEMbymRE2OHYnjf">📗 Institute Application Form</a>
   </section>
 
   <footer>
-    <ul>&copy; 2025 Laxmi Charities. All rights reserved.</ul>
+    <p>&copy; 2025 Laxmi Charities. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
   <script>
     AOS.init();
 
+    // Hamburger Menu
     document.addEventListener("DOMContentLoaded", () => {
       const navToggle = document.querySelector(".hamburger");
       const navMenu = document.querySelector("nav ul");
@@ -91,24 +205,36 @@
       }
     });
 
-    function acceptRules() {
-      document.getElementById("rulesSection").style.display = "none";
-      document.getElementById("passwordSection").style.display = "block";
-    }
+    // Rules & Next Button
+    const acceptRules = document.getElementById("acceptRules");
+    const nextBtn = document.getElementById("nextBtn");
+    const rulesSection = document.getElementById("rules");
+    const passwordSection = document.getElementById("passwordSection");
+    const linksSection = document.getElementById("linksSection");
 
-    function validatePassword() {
-      const input = document.getElementById("accessPassword").value;
-      const correctPassword = "LCScholarship@25";
-      const errorMsg = document.getElementById("passwordError");
+    acceptRules.addEventListener("change", () => {
+      nextBtn.disabled = !acceptRules.checked;
+    });
 
-      if (input === correctPassword) {
-        document.getElementById("passwordSection").style.display = "none";
-        document.getElementById("formLinks").style.display = "block";
-        errorMsg.style.display = "none";
+    nextBtn.addEventListener("click", () => {
+      rulesSection.style.display = "none";
+      passwordSection.style.display = "block";
+    });
+
+    // Password Check
+    const correctPassword = "LCScholarship@25"; // <-- change password here
+    const submitPassword = document.getElementById("submitPassword");
+    const errorMsg = document.getElementById("errorMsg");
+
+    submitPassword.addEventListener("click", () => {
+      const entered = document.getElementById("accessPassword").value;
+      if (entered === correctPassword) {
+        passwordSection.style.display = "none";
+        linksSection.style.display = "block";
       } else {
         errorMsg.style.display = "block";
       }
-    }
+    });
   </script>
 </body>
 </html>
