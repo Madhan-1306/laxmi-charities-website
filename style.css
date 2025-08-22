@@ -1272,3 +1272,46 @@ form button:hover {
   font-weight: normal;
   color: #282828;
 }
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.social-icons a {
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+  transition: filter 0.3s;
+}
+
+/* Brand color filters on hover */
+.social-icons a:hover img[alt="Instagram"] {
+  filter: invert(37%) sepia(99%) saturate(636%) hue-rotate(299deg) brightness(90%) contrast(101%);
+}
+
+.social-icons a:hover img[alt="Facebook"] {
+  filter: invert(33%) sepia(76%) saturate(626%) hue-rotate(187deg) brightness(92%) contrast(105%);
+}
+
+.social-icons a:hover img[alt="YouTube"] {
+  filter: invert(21%) sepia(99%) saturate(6658%) hue-rotate(358deg) brightness(94%) contrast(108%);
+}
