@@ -1272,11 +1272,18 @@ form button:hover {
   font-weight: normal;
   color: #282828;
 }
+.social-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
 .social-icons {
   display: flex;
   justify-content: center;
   gap: 30px;
-  margin: 40px 0;
+  margin: 20px 0;
 }
 
 .social-icons a {
@@ -1288,30 +1295,53 @@ form button:hover {
   background-color: #fff;
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.social-icons a:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-}
-
+/* Keep icons colored all the time */
 .social-icons img {
   width: 24px;
   height: 24px;
-  filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
-  transition: filter 0.3s;
 }
 
-/* Brand color filters on hover */
-.social-icons a:hover img[alt="Instagram"] {
+/* Brand colors */
+.instagram-icon {
   filter: invert(37%) sepia(99%) saturate(636%) hue-rotate(299deg) brightness(90%) contrast(101%);
 }
 
-.social-icons a:hover img[alt="Facebook"] {
+.facebook-icon {
   filter: invert(33%) sepia(76%) saturate(626%) hue-rotate(187deg) brightness(92%) contrast(105%);
 }
 
-.social-icons a:hover img[alt="YouTube"] {
+.youtube-icon {
   filter: invert(21%) sepia(99%) saturate(6658%) hue-rotate(358deg) brightness(94%) contrast(108%);
+}
+.about-block1 {
+  text-align: left;       /* everything aligned to left */
+  margin: 0;
+  padding: 20px 0;        /* space between sections */
+  line-height: 1.6;
+}
+
+.about-block1 h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0 0 15px 0;
+}
+
+.about-block1 h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 20px 0 10px 0;  /* space above and below */
+}
+
+.about-block1 p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.about-block1 img {
+  max-width: 250px;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: 0;         /* left aligned */
 }
