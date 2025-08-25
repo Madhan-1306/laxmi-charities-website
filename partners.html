@@ -146,6 +146,8 @@
       font-size: 15px;
       text-decoration: none;
       transition: background-color 0.3s ease;
+      border: none;
+      cursor: pointer;
     }
 
     .partner-button:hover {
@@ -203,40 +205,38 @@
         display: flex;
       }
     }
-.partners-layout {
-  text-align: center;
-  padding: 50px 20px;
-}
 
-.partners-scroll {
-  overflow: hidden;
-  width: 100%;
-}
+    .partners-layout {
+      text-align: center;
+      padding: 50px 20px;
+    }
 
-.partners-logos {
-  display: flex;
-  flex-wrap: wrap; /* ✅ allow wrapping instead of scrolling */
-  justify-content: center;
-  gap: 20px;       /* ✅ space between logos */
-  /* animation: scroll-left 40s linear infinite; ❌ removed */
-}
+    .partners-scroll {
+      overflow: hidden;
+      width: 100%;
+    }
 
-.partners-logos img {
-  width: 150px;   /* Adjust logo size */
-  height: auto;
-  margin: 15px;
-  flex: 0 0 auto;
-}
+    .partners-logos {
+      display: flex;
+      flex-wrap: wrap; 
+      justify-content: center;
+      gap: 20px;       
+    }
 
-/* Mobile view */
-@media (max-width: 768px) {
-  .partners-logos img {
-    width: 100px;  /* Smaller logos for mobile */
-    margin: 10px;
-  }
-}
+    .partners-logos img {
+      width: 150px;   
+      height: auto;
+      margin: 15px;
+      flex: 0 0 auto;
+    }
 
-
+    /* Mobile view */
+    @media (max-width: 768px) {
+      .partners-logos img {
+        width: 100px; 
+        margin: 10px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -265,31 +265,51 @@
   </div>
 
   <section class="section partners-layout" data-aos="fade-up" data-aos-duration="10000">
-  <div class="section-inner">
-    <h2>Our Partners</h2>
-    <div class="partners-scroll">
-      <div class="partners-logos">
-        <!-- Repeat 80 logos here -->
-        <img src="./resources/college logo/Anurag University, Hyderabad.jpg" alt="Partner 1" />
-        <img src="./resources/college logo/B V Raju Institute of Technology, Narsapur.jpeg" alt="Partner 2" />
-        <img src="./resources/college logo/Chennai Institute of Technology.png" alt="Partner 3" />
-        <img src="./resources/college logo/Dr. M.G.R. Educational and Research Institute.png" alt="Partner 4" />
-        <img src="./resources/college logo/Ethiraj College for Women, Chennai.jpg" alt="Partner 5" />
-        <img src="./resources/college logo/Federal Institute of Science and Technology (FISAT), Kerala.png" alt="Partner 6" />
+    <div class="section-inner">
+      <h2>Our Partners</h2>
+      <div class="partners-scroll">
+        <div class="partners-logos">
+          <!-- First visible logos -->
+          <img src="./resources/college logo/Anurag University, Hyderabad.jpg" alt="Partner 1" />
+          <img src="./resources/college logo/B V Raju Institute of Technology, Narsapur.jpeg" alt="Partner 2" />
+          <img src="./resources/college logo/Chennai Institute of Technology.png" alt="Partner 3" />
+          <img src="./resources/college logo/Dr. M.G.R. Educational and Research Institute.png" alt="Partner 4" />
+          <img src="./resources/college logo/Ethiraj College for Women, Chennai.jpg" alt="Partner 5" />
+          <img src="./resources/college logo/Federal Institute of Science and Technology (FISAT), Kerala.png" alt="Partner 6" />
+        </div>
       </div>
-  </div>
-  <div class="partners-scroll">
-    <div class="partners-logos">
-      <img src="./resources/college logo/G. Narayanamma Institute of Technology and Science for Women, Hyderabad.jpg">
-      <img src="./resources/college logo/Guru Nanak College, Velachery, Chennai.jpg">
-      <img src="./resources/college logo/Mepco Schlenk Engineering College.png">
-      <img src="./resources/college logo/Sri Ramachandra Institute of Higher Education and Research.png">
-      <img src="./resources/college logo/Srimad Andavan Arts and Science College.jpg">
-      <img src="./resources/college logo/SRM Institute of Science and Technology.jpg">
-    </div>
-  </div>
-</section>
 
+      <!-- Hidden Logos -->
+      <div class="partners-scroll hidden-logos" style="display:none;">
+        <div class="partners-logos">
+          <img src="./resources/college logo/G. Narayanamma Institute of Technology and Science for Women, Hyderabad.jpg">
+          <img src="./resources/college logo/Guru Nanak College, Velachery, Chennai.jpg">
+          <img src="./resources/college logo/Mepco Schlenk Engineering College.png">
+          <img src="./resources/college logo/Sri Ramachandra Institute of Higher Education and Research.png">
+          <img src="./resources/college logo/Srimad Andavan Arts and Science College.jpg">
+          <img src="./resources/college logo/SRM Institute of Science and Technology.jpg">
+          <img src="./resources/college logo/SRM TRP Engineering College.jpg">
+          <img src="./resources/college logo/TVS Teacher Training Academy.png">
+          <img src="./resources/college logo/University College of Engineering, Arni (Anna University Constituent College).png">
+          <img src="./resources/college logo/Velalar College of Engineering and Technology.jpg">
+          <img src="./resources/college logo/Women’s Christian College, Chennai.png">
+          <img src="./resources/school logo/DAV BOYS HIGHER SECONDARY SCHOOL.jpg">
+          <img src="./resources/school logo/DR. NALLI KUPPUSWAMY VIVEKANANDA VIDYALAYA JUNIOR COLLEGE.png">
+          <img src="./resources/school logo/P S SENIOR SECONDARY SCHOOL.png">
+          <img src="./resources/school logo/Screenshot 2025-08-18 184732.png">
+          <img src="./resources/school logo/SRI RAMAKRISHNA MISSION VIDYALAYA SWAMI SHIVANANDA HIGHER SECONDARY SCHOOL.png">
+          <img src="./resources/school logo/VIDYA PEETAM SENIOR SECONDARY SCHOOL.png">
+          <img src="./resources/school logo/VIDYODAYA MATRICULATION HIGHER SECONDARY SCHOOL.png">
+          <img src="./resources/school logo/VYASA VIDYALAYA MATRICULATION HIGHER SECONDARY SCHOOL.png">
+        </div>
+      </div>
+
+      <!-- Read More Button -->
+      <div style="text-align:center; margin-top:20px;">
+        <button id="readMoreBtn" class="partner-button">Read More</button>
+      </div>
+    </div>
+  </section>
 
   <main class="partner-main">
     <section class="partner-section">
@@ -319,9 +339,22 @@
   <script>
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('nav ul');
-
     hamburger.addEventListener('click', () => {
       navMenu.classList.toggle('active');
+    });
+
+    // 🔹 Read More Button Script
+    const readMoreBtn = document.getElementById("readMoreBtn");
+    const hiddenLogos = document.querySelector(".hidden-logos");
+
+    readMoreBtn.addEventListener("click", () => {
+      if (hiddenLogos.style.display === "none") {
+        hiddenLogos.style.display = "block";
+        readMoreBtn.textContent = "Show Less";
+      } else {
+        hiddenLogos.style.display = "none";
+        readMoreBtn.textContent = "Read More";
+      }
     });
   </script>
 </body>
