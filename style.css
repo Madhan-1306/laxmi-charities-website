@@ -1351,3 +1351,175 @@ form button:hover {
   display: block;
   margin-left: 0;         /* left aligned */
 }
+.donors {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+.donors .donor-header {
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(to right, #0575e6, #021b79);
+}
+
+.donors .donor-header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-align: center;   /* ✅ Ensures heading is centered */
+}
+
+
+.donors .donor-header p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 10px auto 0;
+  color: #fff;
+  text-align: center;   /* ✅ Center text */
+}
+
+
+/* Donor List */
+.donors .donor-list {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.donors .donor-item {
+  background: linear-gradient(135deg, #1e3c72, #2a5298, #00c6ff);
+  color: white;
+  padding: 18px 25px;
+  margin: 15px 0;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Arrow effect */
+.donors .donor-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -30px;
+  width: 60px;
+  height: 100%;
+  background: inherit;
+  transform: skewX(-30deg);
+  z-index: -1;
+}
+
+.donors .donor-item:hover {
+  transform: translateX(5px);
+  transition: 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .donors .donor-item {
+    font-size: 16px;
+    padding: 14px 18px;
+  }
+}
+/* Overall container */
+.trustes {
+  width: 100%;              /* take full width */
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+/* Header with blue background */
+.trustes-header {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #0575e6, #021b79); 
+  color: #fff;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* ensures perfect centering */
+  justify-content: center;
+}
+
+.trustes-header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #fff; /* white text */
+}
+
+.trustes-header p {
+  font-size: 18px;
+  color: #fff; /* white text */
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Trustees Grid */
+.trustes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  padding: 40px 20px;
+}
+
+/* Trustee Card */
+.trustes-card {
+  position: relative;
+  width: 100%;
+  max-width: 280px;   /* prevents cards from getting too big */
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trustes-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Name overlay centered in image */
+.trustes-name {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .trustes-header h1 {
+    font-size: 28px;
+  }
+
+  .trustes-header p {
+    font-size: 16px;
+  }
+
+  .trustes-grid {
+    gap: 20px;
+  }
+
+  .trustes-card {
+    max-width: 220px;   /* smaller, better fit on mobile */
+  }
+}
