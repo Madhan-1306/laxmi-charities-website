@@ -662,22 +662,34 @@ form button:hover {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ensure images are small */
+  gap: 15px;
   padding: 0 10px;
 }
+
 
 .gallery-grid img {
   width: 100%;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
 }
 
+/* Ensure the images are small in all sections */
+h2 + .gallery-grid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Consistent image size */
+}
 .gallery-grid img:hover {
   transform: scale(1.05);
 }
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Even smaller images on mobile */
+    gap: 10px;
+  }
+}
+
 
 .update-banner {
   background-color: #1262da;
