@@ -653,6 +653,13 @@ form button:hover {
   margin-bottom: 10px;
   color: blue;
 }
+.gallery-section h4 {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: blue;
+}
+
 
 .gallery-section p {
   font-size: 1.1rem;
@@ -1535,4 +1542,28 @@ h2 + .gallery-grid {
   .trustes-card {
     max-width: 220px;   /* smaller, better fit on mobile */
   }
+}
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;   /* space between items */
+  margin-top: 20px;
+}
+
+.gallery-item {
+  text-align: center;
+  width: 250px;  /* slightly bigger box */
+}
+
+.gallery-item h4 {
+  margin-bottom: 12px;
+  font-size: 15px;   /* bigger heading */
+  font-weight: 600;  /* make it bold */
+}
+
+.gallery-item img {
+  width: 200px;   /* bigger image */
+  height: 200px;  /* force same size */
+  object-fit: cover; /* keeps images neat without stretching */
+  border-radius: 8px;
 }
